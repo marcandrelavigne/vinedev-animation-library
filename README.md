@@ -1,12 +1,11 @@
-# vinedev Animation Library (BAL)
+# VineDev Animation Library (VAL)
 
 A simple, but expandable, library for bare-bone animations and default scroll trigger functionalities. 
 
 # Getting Started
 
-- [Getting Started Guide](https://gitlab.com/malavigne/vinedev-animation-library/-/wikis/Getting-Started)
-- [Wiki](https://gitlab.com/malavigne/vinedev-animation-library/-/wikis/home)
-- [Demos](https://gitlab.com/malavigne/vinedev-animation-library/-/wikis/Demos)
+- [Getting Started Guide](https://github.com/marcandrelavigne/vinedev-animation-library/wiki/Getting-Started-Guide)
+- [Demos](https://github.com/marcandrelavigne/vinedev-animation-library/wiki/Demos)
 
 # Dist / Src
 
@@ -14,7 +13,7 @@ On production, use files (JS and CSS) only from `dist/` folder. Files located in
 
 ### Build the library
 
-BAL uses `webpack` to build a production (dist) version.
+VAL uses `webpack` to build a production (dist) version.
 
 First you need to install all dependencies, in the repo’s root:
 
