@@ -1,0 +1,89 @@
+@import '../common/variables.scss';
+
+[data-animate~="reveal"] {
+  clip-path: inset(0 100% 0 0);
+  position: relative;
+
+  &:after {
+	content: "";
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--color);
+	transform: scaleX(0);
+	transform-origin: 0 50%;
+	pointer-events: none;
+  }
+
+  &[data-animate~="trigger"],
+  [data-animate~="trigger"] & {
+	animation: animation-clip 800ms 1 forwards;
+
+	&:after {
+	  animation: animation-reveal 800ms 1 forwards;
+	}
+
+  }
+
+  &[data-animate~="reverse"],
+  [data-animate~="reverse"] & {
+	animation: animation-clip-reverse 800ms 1 forwards;
+
+	&:after {
+	  animation: animation-reveal-reverse 800ms 1 forwards;
+	}
+
+  }
+
+}
+
+@keyframes animation-clip {
+  0% {
+	clip-path: inset(0 100% 0 0);
+  }
+  100% {
+	clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes animation-clip-reverse {
+  0% {
+	clip-path: inset(0 0 0 0);
+  }
+  100% {
+	clip-path: inset(0 100% 0 0);
+  }
+}
+
+@keyframes animation-reveal {
+  0%, 50% {
+	transform-origin: 0 50%;
+  }
+  60%, 100% {
+	transform-origin: 100% 50%;
+  }
+  60% {
+	transform: scaleX(1);
+  }
+  100% {
+	transform: scaleX(0);
+  }
+}
+
+@keyframes animation-reveal-reverse {
+  0%, 50% {
+	transform-origin: 100% 50%;
+  }
+  60%, 100% {
+	transform-origin: 0 50%;
+  }
+  60% {
+	transform: scaleX(0);
+  }
+  100% {
+	transform: scaleX(1);
+  }
+}

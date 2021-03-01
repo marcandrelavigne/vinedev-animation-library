@@ -1,0 +1,187 @@
+@import '../common/variables.scss';
+
+// Translate from bottom to top
+[data-animate~="translateBottom"] {
+  transform: translateY(200%);
+  opacity: 0;
+
+  &[data-animate~="trigger"],
+  [data-animate~="trigger"] & {
+	animation: animation-translate-bottom 800ms 1 forwards;
+  }
+
+  &[data-animate~="reverse"],
+  [data-animate~="reverse"] & {
+	animation: animation-translate-bottom-reverse 800ms 1 forwards;
+  }
+
+}
+
+@keyframes animation-translate-bottom {
+  0% {
+	transform: translateY(200%);
+	opacity: 0;
+  }
+  50% {
+	opacity: 1;
+  }
+  100% {
+	transform: translateY(0%);
+	opacity: 1
+  }
+}
+
+@keyframes animation-translate-bottom-reverse {
+  0% {
+	transform: translateY(0%);
+	opacity: 1;
+  }
+  50% {
+	opacity: 0;
+  }
+  100% {
+	transform: translateY(200%);
+	opacity: 0;
+  }
+}
+
+
+
+// Translate from top to bottom
+[data-animate~="translateTop"] {
+  transform: translateY(-200%);
+  opacity: 0;
+
+  &[data-animate~="trigger"],
+  [data-animate~="trigger"] & {
+	animation: animation-translate-top 800ms 1 forwards;
+  }
+
+  &[data-animate~="reverse"],
+  [data-animate~="reverse"] & {
+	animation: animation-translate-top-reverse 800ms 1 forwards;
+  }
+
+}
+
+@keyframes animation-translate-top {
+  0% {
+	transform: translateY(-200%);
+	opacity: 0;
+  }
+  50% {
+	opacity: 1;
+  }
+  100% {
+	transform: translateY(0%);
+	opacity: 1
+  }
+}
+
+@keyframes animation-translate-top-reverse {
+  0% {
+	transform: translateY(0%);
+	opacity: 1;
+  }
+  50% {
+	opacity: 0;
+  }
+  100% {
+	transform: translateY(-200%);
+	opacity: 0;
+  }
+}
+
+
+
+// Translate from left to right
+[data-animate~="translateLeft"] {
+  transform: translateX(-200%);
+  opacity: 0;
+
+  &[data-animate~="trigger"],
+  [data-animate~="trigger"] & {
+	animation: animation-translate-left 800ms 1 forwards;
+  }
+
+  &[data-animate~="reverse"],
+  [data-animate~="reverse"] & {
+	animation: animation-translate-left-reverse 800ms 1 forwards;
+  }
+
+}
+
+@keyframes animation-translate-left {
+  0% {
+	transform: translateX(-200%);
+	opacity: 0;
+  }
+  50% {
+	opacity: 1;
+  }
+  100% {
+	transform: translateX(0%);
+	opacity: 1
+  }
+}
+
+@keyframes animation-translate-left-reverse {
+  0% {
+	transform: translateX(0%);
+	opacity: 1;
+  }
+  50% {
+	opacity: 0;
+  }
+  100% {
+	transform: translateX(-200%);
+	opacity: 0;
+  }
+}
+
+
+
+// Translate from right to left
+[data-animate~="translateRight"] {
+  transform: translateX(200%);
+  opacity: 0;
+
+  &[data-animate~="trigger"],
+  [data-animate~="trigger"] & {
+	animation: animation-translate-right 800ms 1 forwards;
+  }
+
+  &[data-animate~="reverse"],
+  [data-animate~="reverse"] & {
+	animation: animation-translate-right-reverse 800ms 1 forwards;
+  }
+
+}
+
+@keyframes animation-translate-right {
+  0% {
+	transform: translateX(200%);
+	opacity: 0;
+  }
+  50% {
+	opacity: 1;
+  }
+  100% {
+	transform: translateX(0%);
+	opacity: 1
+  }
+}
+
+@keyframes animation-translate-right-reverse {
+  0% {
+	transform: translateX(0%);
+	opacity: 1;
+  }
+  50% {
+	opacity: 0;
+  }
+  100% {
+	transform: translateX(200%);
+	opacity: 0;
+  }
+}

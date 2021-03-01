@@ -1,0 +1,19 @@
+// Colors
+:root {
+  --color: white;
+  --primary: white;
+  --secondary: white;
+  --tertiary: white;
+}
+
+[data-animate~="primary-color"] {
+  --color: var(--primary);
+}
+
+[data-animate~="secondary-color"] {
+  --color: var(--secondary);
+}
+
+[data-animate~="tertiary-color"] {
+  --color: var(--tertiary);
+}

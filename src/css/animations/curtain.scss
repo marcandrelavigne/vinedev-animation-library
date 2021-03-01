@@ -1,0 +1,93 @@
+@import '../common/variables.scss';
+
+[data-animate~="curtain"] {
+  position: relative;
+  overflow: hidden;
+  
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color);
+    transform: scaleX(100%);
+    pointer-events: none;
+    overflow: hidden;
+    transform-origin: right;
+  }
+  
+  &[data-animate~="trigger"] {
+    &:after {
+      animation: animation-curtain 800ms 1 forwards;
+    }
+    img {
+      animation: animation-curtainimg 3000ms 1 forwards;
+    }
+  }
+  
+  &[data-animate~="disabled"] {
+    &:after {
+      display: none;
+    }
+    img {
+      animation: none;
+      transform: none;
+    }
+  }
+  
+  &[data-animate~="reverse"] {
+    &:after {
+      animation: animation-curtain-reverse 800ms 1 forwards;
+    }
+    img {
+      animation: animation-curtainimg-reverse 3000ms 1 forwards;
+    }
+  }
+
+  img {
+    transform: scale(1.2);
+    transition: 0.5s;
+    transform-origin: center;
+  }
+
+}
+
+@keyframes animation-curtain {
+  0%, 50% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes animation-curtain-reverse {
+  0% {
+    transform: scaleX(0);
+  }
+  50%, 100% {
+    transform: scaleX(1);
+  }
+  
+}
+
+@keyframes animation-curtainimg {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes animation-curtainimg-reverse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}

@@ -1,0 +1,16 @@
+[data-animate~="trigger"] {
+  @for $i from 1 through 35 {
+	&[data-animate~="delay-#{$i}"],
+	[data-animate~="delay-#{$i}"] {
+	  $animationValueDelay:($i / 10);
+	  $animationValueDelay:#{$animationValueDelay}s;
+	  animation-delay: $animationValueDelay;
+
+	  &:after,
+	  &:before {
+		animation-delay: $animationValueDelay;
+	  }
+
+	}
+  }
+}

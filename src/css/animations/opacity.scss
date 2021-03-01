@@ -1,0 +1,34 @@
+@import '../common/variables.scss';
+
+[data-animate~="opacity"] {
+  opacity: 0;
+
+  &[data-animate~="trigger"],
+  [data-animate~="trigger"] & {
+	animation: animation-opacity 800ms 1 forwards;
+  }
+
+  &[data-animate~="reverse"],
+  [data-animate~="reverse"] & {
+	animation: animation-opacity-reverse 800ms 1 forwards;
+  }
+
+}
+
+@keyframes animation-opacity {
+  0% {
+	opacity: 0;
+  }
+  100% {
+	opacity: 1;
+  }
+}
+
+@keyframes animation-opacity-reverse {
+  0% {
+	opacity: 1;
+  }
+  100% {
+	opacity: 0;
+  }
+}

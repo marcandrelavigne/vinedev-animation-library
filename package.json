@@ -1,0 +1,25 @@
+{
+  "name": "vinedev-animation-library",
+  "version": "1.0.0",
+  "description": "CSS animations library with GSAP",
+  "main": "index.js",
+  "private": "true",
+  "repository": "https://github.com/marcandrelavigne/vinedev-animation-library",
+  "author": "Marc-Andre Lavigne <hello@marcandre.ca>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
+  "dependencies": {
+    "gsap": "^3.5.1"
+  },
+  "devDependencies": {
+    "css-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^1.2.1",
+    "sass": "^1.27.1",
+    "sass-loader": "^10.0.4",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.3.1",
+    "webpack-cli": "^4.1.0"
+  }
+}
